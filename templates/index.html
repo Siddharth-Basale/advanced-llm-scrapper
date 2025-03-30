@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Scraper & Parser</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Header with Theme Toggle -->
+    <header class="bg-dark text-center py-3 sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="text-light fs-4 fs-md-2 mb-0">
+                <i class="fas fa-spider me-2"></i>Web Scraper Pro
+            </h1>
+            <div>
+                <button id="theme-toggle" class="btn btn-sm btn-outline-secondary">
+                    <i class="fas fa-moon"></i> <span class="d-none d-md-inline">Dark Mode</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container mt-4 mb-5">
+        <!-- Alert Container -->
+        <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 1100"></div>
+
+        <!-- Scrape URL Section -->
+        <section class="mb-5 card bg-dark border-secondary">
+            <div class="card-body">
+                <form id="scrape-form">
+                    <h2 class="text-center mb-4 text-light fs-5 fs-md-3">
+                        <i class="fas fa-globe me-2"></i>Scrape a URL
+                    </h2>
+                    <div class="row g-2">
+                        <div class="col-12 col-md-9">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-link"></i></span>
+                                <input type="text" id="url" class="form-control" 
+                                       placeholder="https://example.com" required>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                            <button type="submit" class="btn btn-primary w-100" id="scrape-button">
+                                <span id="scrape-button-text">Scrape</span>
+                                <span id="scrape-spinner" class="spinner-border spinner-border-sm d-none" role="status"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="mt-2 text-muted small">
+                        <i class="fas fa-info-circle me-1"></i> Enter a full URL (e.g., <code>https://www.example.com</code>)
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Scraped Content Section -->
+        <section id="scraped-content" class="d-none card bg-dark border-secondary">
+            <div class="card-body">
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                    <h2 class="text-light fs-5 fs-md-3 mb-2 mb-md-0">
+                        <i class="fas fa-file-alt me-2"></i>Scraped Content
+                    </h2>
+                    <div class="d-flex">
+                        <span class="badge bg-info me-2 align-self-center" id="word-count-badge">0 words</span>
+                        <div class="btn-group">
+                            <button class="btn btn-sm btn-outline-secondary" id="copy-scraped" title="Copy to clipboard">
+                                <i class="fas fa-copy"></i> <span class="d-none d-md-inline">Copy</span>
+                            </button>
+                            <button class="btn btn-sm btn-outline-secondary" id="clear-all" title="Clear all">
+                                <i class="fas fa-trash-alt"></i> <span class="d-none d-md-inline">Clear</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Screenshot Preview -->
+                <div class="mb-3 text-center" id="screenshot-container" style="display: none;">
+                    <div class="position-relative d-inline-block">
+                        <img id="screenshot-preview" src="" class="img-thumbnail cursor-zoom" 
+                             style="max-height: 200px; cursor: pointer;" alt="Page screenshot">
+                        <button id="remove-screenshot" class="btn btn-danger btn-sm position-absolute top-0 end-0 m-1">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <p class="small text-muted mt-1">Click to view full screenshot</p>
+                </div>
+                
+                <!-- Content with expand/collapse -->
+                <div class="accordion mb-3">
+                    <div class="accordion-item bg-dark border-secondary">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-dark text-light collapsed" type="button" 
+                                    data-bs-toggle="collapse" data-bs-target="#scrapedContentCollapse">
+                                <i class="fas fa-chevron-down me-2"></i>View/Hide Scraped Content
+                            </button>
+                        </h2>
+                        <div id="scrapedContentCollapse" class="accordion-collapse collapse">
+                            <div class="accordion-body p-0">
+                                <textarea id="dom-content" class="form-control bg-darker text-light" 
+                                          rows="10" readonly></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Summary Section -->
+                <div class="mb-3">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-2">
+                        <h3 class="text-light fs-6 fs-md-5 mb-2 mb-md-0">
+                            <i class="fas fa-file-contract me-2"></i>AI Summary
+                        </h3>
+                        <div class="d-flex">
+                            <select id="summary-length" class="form-select form-select-sm me-2 w-auto">
+                                <option value="short">Short</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="long">Long</option>
+                            </select>
+                            <button class="btn btn-sm btn-info" id="generate-summary">
+                                <i class="fas fa-magic me-1"></i> <span class="d-none d-md-inline">Generate</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="summary-container" class="parsed-results-box d-none p-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parse Content Section -->
+        <section id="parse-section" class="d-none mt-5 card bg-dark border-secondary">
+            <div class="card-body">
+                <form id="parse-form">
+                    <h2 class="text-center mb-4 text-light fs-5 fs-md-3">
+                        <i class="fas fa-code me-2"></i>Parse Content
+                    </h2>
+                    <div class="mb-3">
+                        <label for="parse-description" class="form-label text-light">
+                            <i class="fas fa-question-circle me-1"></i> What information should I extract?
+                        </label>
+                        <textarea id="parse-description" class="form-control" rows="2"
+                                  placeholder="Example: 'Extract all article headings and their summaries'"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="text-muted small mb-0">
+                            <i class="fas fa-lightbulb me-1"></i> Try: "List all products with prices"
+                        </p>
+                        <button type="submit" class="btn btn-success" id="parse-button">
+                            <span id="parse-button-text">Parse</span>
+                            <span id="parse-spinner" class="spinner-border spinner-border-sm d-none" role="status"></span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Parsed Results -->
+                <div id="parsed-results" class="d-none mt-4">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                        <h3 class="text-light fs-6 fs-md-4 mb-2 mb-md-0">
+                            <i class="fas fa-list-check me-2"></i>Parsed Results
+                        </h3>
+                        <div class="btn-group">
+                            <button class="btn btn-sm btn-outline-secondary" id="copy-results" title="Copy to clipboard">
+                                <i class="fas fa-copy"></i> <span class="d-none d-md-inline">Copy</span>
+                            </button>
+                            <button class="btn btn-sm btn-outline-secondary" id="download-results" title="Download">
+                                <i class="fas fa-download"></i> <span class="d-none d-md-inline">Download</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="results" class="parsed-results-box p-3"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Full Screenshot Modal -->
+    <div class="modal fade" id="screenshotModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-light">
+                        <i class="fas fa-expand me-2"></i>Full Page Screenshot
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img id="full-screenshot" src="" class="img-fluid" style="max-height: 80vh;">
+                </div>
+                <div class="modal-footer border-secondary">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        <i class="fas fa-times me-1"></i> Close
+                    </button>
+                    <a id="download-screenshot" href="#" class="btn btn-primary" download>
+                        <i class="fas fa-download me-1"></i> Download
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center py-3 text-light mt-5 border-top border-secondary">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center align-items-center">
+                <span class="me-3"><i class="fas fa-code"></i> with <i class="fas fa-heart text-danger"></i> by Web Scraper Pro</span>
+                <span class="me-3"><i class="fas fa-clock"></i> <span id="current-time"></span></span>
+                <span><i class="fas fa-server"></i> Status: <span class="text-success" id="api-status">Operational</span></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Global state
+        let currentTheme = 'dark';
+        let lastScrapedUrl = '';
+        let apiCheckInterval;
+
+        $(document).ready(function () {
+            // Initialize UI components
+            initTheme();
+            updateClock();
+            setInterval(updateClock, 1000);
+            checkApiStatus();
+            apiCheckInterval = setInterval(checkApiStatus, 30000);
+
+            // Theme Toggle
+            $('#theme-toggle').on('click', toggleTheme);
+
+            // Scrape Form Handling
+            $('#scrape-form').on('submit', handleScrapeSubmit);
+
+            // Generate Summary
+            $('#generate-summary').on('click', handleSummaryGeneration);
+
+            // Parse Form Handling
+            $('#parse-form').on('submit', handleParseSubmit);
+
+            // Copy buttons
+            $('#copy-scraped').on('click', () => copyToClipboard('dom-content'));
+            $('#copy-results').on('click', () => copyToClipboard('results'));
+
+            // Download buttons
+            $('#download-results').on('click', downloadResults);
+            $('#download-screenshot').on('click', function() {
+                const src = $('#full-screenshot').attr('src');
+                $(this).attr('href', src);
+            });
+
+            // Clear buttons
+            $('#clear-all').on('click', clearAll);
+            $('#remove-screenshot').on('click', removeScreenshot);
+
+            // Screenshot preview
+            $('#screenshot-preview').on('click', showFullScreenshot);
+
+            // Initialize tooltips
+            $('[title]').tooltip({ trigger: 'hover', delay: { show: 500, hide: 100 } });
+        });
+
+        // Initialize theme from localStorage
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            setTheme(savedTheme === 'dark');
+        }
+
+        // Toggle between dark and light theme
+        function toggleTheme() {
+            const isDark = $('html').attr('data-bs-theme') === 'dark';
+            setTheme(!isDark);
+        }
+
+        // Apply theme settings
+        function setTheme(isDark) {
+            currentTheme = isDark ? 'dark' : 'light';
+            $('html').attr('data-bs-theme', currentTheme);
+            $('#theme-toggle').html(
+                `<i class="fas ${isDark ? 'fa-sun' : 'fa-moon'}"></i> <span class="d-none d-md-inline">${isDark ? 'Light' : 'Dark'} Mode</span>`
+            );
+            localStorage.setItem('theme', currentTheme);
+        }
+
+        // Handle scrape form submission
+        function handleScrapeSubmit(event) {
+            event.preventDefault();
+            const url = $('#url').val().trim();
+            
+            if (!url) {
+                showAlert('Please enter a valid URL', 'warning');
+                return;
+            }
+
+            lastScrapedUrl = url;
+            
+            // Show loading state
+            $('#scrape-button-text').text('Scraping...');
+            $('#scrape-spinner').removeClass('d-none');
+            $('#scrape-button').prop('disabled', true);
+            
+            // Clear previous results
+            $('#dom-content').val('');
+            $('#results').text('');
+            $('#summary-container').addClass('d-none').html('');
+            $('#parsed-results').addClass('d-none');
+            $('#screenshot-container').hide();
+
+            $.ajax({
+                url: '/scrape',
+                method: 'POST',
+                data: { url },
+                success: function (response) {
+                    if (response.status === 'error') {
+                        showAlert(response.error, 'danger');
+                        return;
+                    }
+                    
+                    $('#scraped-content').removeClass('d-none');
+                    $('#parse-section').removeClass('d-none');
+                    $('#dom-content').val(response.dom_content);
+                    $('#word-count-badge').text(response.word_count + ' words');
+                    
+                    if (response.screenshot) {
+                        $('#screenshot-container').show();
+                        $('#screenshot-preview').attr('src', response.screenshot);
+                        $('#full-screenshot').attr('src', response.screenshot);
+                        showAlert('Screenshot captured successfully!', 'success');
+                    } else {
+                        showAlert('Content scraped successfully (screenshot unavailable)', 'success');
+                    }
+                },
+                error: function(xhr) {
+                    const error = xhr.responseJSON?.error || 'Failed to scrape URL';
+                    showAlert(error, 'danger');
+                },
+                complete: function() {
+                    $('#scrape-button-text').text('Scrape');
+                    $('#scrape-spinner').addClass('d-none');
+                    $('#scrape-button').prop('disabled', false);
+                }
+            });
+        }
+
+        // Handle summary generation
+        function handleSummaryGeneration() {
+            const content = $('#dom-content').val();
+            if (!content.trim()) {
+                showAlert('No content to summarize. Please scrape a URL first.', 'warning');
+                return;
+            }
+            
+            const length = $('#summary-length').val();
+            const $button = $('#generate-summary');
+            
+            $button.html('<i class="fas fa-spinner fa-spin me-1"></i> Generating...');
+            $button.prop('disabled', true);
+            
+            $.ajax({
+                url: '/summarize',
+                method: 'POST',
+                data: {
+                    content: content,
+                    length: length
+                },
+                success: function(response) {
+                    if (response.status === 'error') {
+                        showAlert(response.error, 'danger');
+                        return;
+                    }
+                    
+                    $('#summary-container').removeClass('d-none').html(response.summary);
+                    showAlert('Summary generated successfully!', 'success');
+                },
+                error: function(xhr) {
+                    const error = xhr.responseJSON?.error || 'Failed to generate summary';
+                    showAlert(error, 'danger');
+                },
+                complete: function() {
+                    $button.html('<i class="fas fa-magic me-1"></i> <span class="d-none d-md-inline">Generate</span>');
+                    $button.prop('disabled', false);
+                }
+            });
+        }
+
+        // Handle parse form submission
+        function handleParseSubmit(event) {
+            event.preventDefault();
+            const domContent = $('#dom-content').val();
+            const parseDescription = $('#parse-description').val().trim();
+            
+            if (!domContent.trim()) {
+                showAlert('No content to parse. Please scrape a URL first.', 'warning');
+                return;
+            }
+            
+            if (!parseDescription) {
+                showAlert('Please enter a parse description.', 'warning');
+                return;
+            }
+
+            // Show loading state
+            $('#parse-button-text').text('Parsing...');
+            $('#parse-spinner').removeClass('d-none');
+            $('#parse-button').prop('disabled', true);
+            
+            $.ajax({
+                url: '/parse',
+                method: 'POST',
+                data: {
+                    dom_content: domContent,
+                    parse_description: parseDescription
+                },
+                success: function(response) {
+                    if (response.status === 'error') {
+                        showAlert(response.error, 'danger');
+                        return;
+                    }
+                    
+                    $('#parsed-results').removeClass('d-none');
+                    $('#results').html(response.parsed_results || '<em>No matching content found</em>');
+                    showAlert('Content parsed successfully!', 'success');
+                },
+                error: function(xhr) {
+                    const error = xhr.responseJSON?.error || 'Failed to parse content';
+                    showAlert(error, 'danger');
+                },
+                complete: function() {
+                    $('#parse-button-text').text('Parse');
+                    $('#parse-spinner').addClass('d-none');
+                    $('#parse-button').prop('disabled', false);
+                }
+            });
+        }
+
+        // Copy text to clipboard
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            let text = element.value || element.textContent;
+            
+            if (!text.trim()) {
+                showAlert('Nothing to copy', 'warning');
+                return;
+            }
+            
+            navigator.clipboard.writeText(text).then(() => {
+                showAlert('Copied to clipboard!', 'success');
+            }).catch(err => {
+                showAlert('Failed to copy: ' + err, 'danger');
+            });
+        }
+
+        // Download results as file
+        function downloadResults() {
+            const content = $('#results').text();
+            if (!content.trim()) {
+                showAlert('No results to download', 'warning');
+                return;
+            }
+            
+            // Create blob and download directly
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'parsed_results_' + new Date().toISOString().slice(0, 10) + '.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Clear all content
+        function clearAll() {
+            $('#dom-content').val('');
+            $('#word-count-badge').text('0 words');
+            $('#summary-container').addClass('d-none').html('');
+            $('#parsed-results').addClass('d-none');
+            $('#results').html('');
+            $('#parse-description').val('');
+            $('#url').val('');
+            $('#screenshot-container').hide();
+            showAlert('All content cleared', 'info');
+        }
+
+        // Remove screenshot
+        function removeScreenshot() {
+            $('#screenshot-container').hide();
+            showAlert('Screenshot removed', 'info');
+        }
+
+        // Show full screenshot in modal
+        function showFullScreenshot() {
+            const modal = new bootstrap.Modal(document.getElementById('screenshotModal'));
+            modal.show();
+        }
+
+        // Show alert message
+        function showAlert(message, type) {
+            const alertId = 'alert-' + Date.now();
+            const alertHtml = `
+                <div id="${alertId}" class="alert alert-${type} alert-dismissible fade show" role="alert">
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            `;
+            
+            $('#alert-container').append(alertHtml);
+            
+            // Auto-dismiss after 5 seconds
+            setTimeout(() => {
+                $('#' + alertId).alert('close');
+            }, 5000);
+        }
+
+        // Update clock in footer
+        function updateClock() {
+            const now = new Date();
+            $('#current-time').text(now.toLocaleTimeString());
+        }
+
+        // Check API status
+        function checkApiStatus() {
+            // In a real app, you would ping your API endpoint
+            $('#api-status').removeClass('text-danger text-warning').addClass('text-success')
+                .text('Operational');
+        }
+    </script>
+</body>
+</html>
