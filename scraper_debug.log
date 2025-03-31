@@ -1,186 +1,505 @@
-2025-03-28 23:42:47,395 - INFO - Starting Flask application
-2025-03-28 23:42:47,423 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-03-30 23:03:23,571 - INFO - Starting Flask application
+2025-03-30 23:03:23,588 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.0.185:5000
-2025-03-28 23:42:47,424 - INFO - [33mPress CTRL+C to quit[0m
-2025-03-28 23:42:47,433 - INFO -  * Restarting with watchdog (windowsapi)
-2025-03-28 23:42:48,924 - INFO - Starting Flask application
-2025-03-28 23:42:48,940 - WARNING -  * Debugger is active!
-2025-03-28 23:42:48,958 - INFO -  * Debugger PIN: 129-054-596
-2025-03-28 23:42:51,409 - INFO - 127.0.0.1 - - [28/Mar/2025 23:42:51] "GET / HTTP/1.1" 200 -
-2025-03-28 23:42:51,487 - INFO - 127.0.0.1 - - [28/Mar/2025 23:42:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-28 23:43:10,379 - DEBUG - [SCRAPE-1743185590379083400] Starting scrape request
-2025-03-28 23:43:10,381 - DEBUG - [SCRAPE-1743185590379083400] Fetching page content...
-2025-03-28 23:43:10,381 - DEBUG - [SCRAPE-1743185590379083400] Fetching URL with headers: {'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Referer': 'https://www.google.com/', 'DNT': '1'}
-2025-03-28 23:43:11,209 - DEBUG - Starting new HTTPS connection (1): m.economictimes.com:443
-2025-03-28 23:43:11,311 - DEBUG - https://m.economictimes.com:443 "GET /news/bengaluru-news/at-least-life-decent-in-pune-man-moves-to-bengaluru-after-40-salary-hike-says-rs-25-lpa-is-peanuts-to-live-in-it-capital/amp_articleshow/119376579.cms HTTP/1.1" 200 41657
-2025-03-28 23:43:11,322 - DEBUG - [SCRAPE-1743185590379083400] Processing content...
-2025-03-28 23:43:11,352 - DEBUG - [SCRAPE-1743185590379083400] Cleaning content (length: 145195)
-2025-03-28 23:43:11,373 - DEBUG - [SCRAPE-1743185590379083400] Removed tags: header, script
-2025-03-28 23:43:11,373 - DEBUG - [SCRAPE-1743185590379083400] Found 0 comments
-2025-03-28 23:43:11,374 - DEBUG - [SCRAPE-1743185590379083400] Final line count: 261
-2025-03-28 23:43:11,374 - DEBUG - [SCRAPE-1743185590379083400] Starting screenshot for https://m.economictimes.com/news/bengaluru-news/at-least-life-decent-in-pune-man-moves-to-bengaluru-after-40-salary-hike-says-rs-25-lpa-is-peanuts-to-live-in-it-capital/amp_articleshow/119376579.cms
-2025-03-28 23:43:11,375 - DEBUG - Using proactor: IocpProactor
-2025-03-28 23:43:16,790 - DEBUG - [SCRAPE-1743185590379083400] Navigating to URL...
-2025-03-28 23:43:28,207 - DEBUG - [SCRAPE-1743185590379083400] Taking screenshot...
-2025-03-28 23:43:29,498 - INFO - 127.0.0.1 - - [28/Mar/2025 23:43:29] "POST /scrape HTTP/1.1" 200 -
-2025-03-28 23:43:29,511 - INFO - 127.0.0.1 - - [28/Mar/2025 23:43:29] "GET /static/screenshots/screenshot_1743185608.png HTTP/1.1" 200 -
-2025-03-28 23:43:44,405 - DEBUG - [SUMMARY-1743185624405578400] Generating long summary...
-2025-03-28 23:43:44,406 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
-2025-03-28 23:43:44,406 - DEBUG - load_verify_locations cafile='C:\\Python312\\Lib\\site-packages\\certifi\\cacert.pem'
-2025-03-28 23:43:44,696 - DEBUG - Request options: {'method': 'post', 'url': '/openai/v1/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'user', 'content': 'Please summarize the following content. Provide a detailed summary in about 7-10 sentences.\n\nContent:\nThe Economic Times App\n10M Downloads\nToday’s News\nQuick Reads\nE-Paper\nStock\nRecos\nStream\nBengaluru News\n\'At least life decent in Pune\': Man moves to Bengaluru after 40% salary hike, says Rs 25 LPA is \'peanuts\' to live in IT capital\nAgencies\nSynopsis\nA corporate employee moved from Pune to Bengaluru for a 40% salary hike but regretted the decision within a year. He found the cost of living in Bengaluru much higher, citing high rents and commuting costs. His experience highlights a growing concern among urban professionals about high salaries not necessarily translating to financial stability in metro cities.\nBy\nET Online\nFollow us\nLast Updated:\nMar 23, 2025, 07:48:00 PM IST\nWhile sharing a conversation with a corporate employee, a LinkedIn user recently revealed that his friend relocated from Pune to Bengaluru for a lucrative 40% salary hike but began regretting his decision within a year.\nADVERTISEMENT\nHis story, shared by a friend in a now-viral LinkedIn post, has sparked discussions online.\nAs per the post, the man was earning Rs 18 lakh per annum (LPA) in Pune before accepting a Rs 25 LPA offer in Bengaluru. However, a year into his new role, he reached out to his friend to share his disappointment.\nWhy was the employee unhappy?\nAs per the LinkedIn post, despite a 40% increment, the employee said that the hike was barely \'peanuts for Bangalore.\' The post which was made by his friend claimed that the \'rents here are exorbitantly high. Landlords are misers, asking for 3-4 months\' of deposit.\'\nET PRIME - TOP TRENDING STORIES\nAdani Group stocks: Will averaging out work for retail investors?\nIs Nifty Next 50 a good bet? Only if you are a super long-term investor.\nFalling off the momentum? Why retail investors are losing money after witnessing a long rally\nReliance JioCinema is streaming IPL 2023 for free. Will this now disrupt the OTT business?\nTop Nifty50 stocks analysts suggest buying this week\nLong term wealth creation; 7 stocks with high ROE\nSubscribe to\nETPrime\nAdditionally, traffic has also been a reason which was listed by the friend, adding that \'commuting costs a fortune.\'\n"I miss Pune\'s Rs 15 vada pav. Atleast life and savings were decent there," added the friend in the post.\nADVERTISEMENT\nCheck post here:\nWhat people reacted to the post?\n"Not even 25 LPA, 35 LPA, or even 40+ LPA is enough for a city like Bangalore. The number sounds good to say out loud, but thatâ\x80\x99s where it ends. The reality is that this city makes you feel inferior day by day. It makes you curse at least 3-4 people unintentionally. It deteriorates your health year after year. The unimaginable rise in rent, travel costs, and lifestyle expenses turns you into a greedy personâ\x80\x94always wanting more just to keep up," said one user in reply to the post on LinkedIn.\nAnother user said, "While Bangalore is expensive, calling 25 LPA \'peanuts\' is a bit of a stretch. Yes, rent and deposits are high, and traffic is a nightmare, but it\'s also a city full of opportunities and experiences. People manage to live comfortably on much lower salaries too! Maybe your friend just needs better budgeting skills instead of blaming the city."\nContinue Reading\n(You can now subscribe to our\nEconomic Times WhatsApp channel\n)\nREAD MORE ON\nbangalore it layoffs housing crisis\nbangalore salary\nbengaluru rents\nPune cost of living\nlife in Pune vs Bengaluru\nBengaluru rent\nbengaluru techie salary\n(Catch all the\nBusiness News\n,\nBreaking News\n,\nBudget 2025\nEvents and\nLatest News\nUpdates on\nThe Economic Times\n.)\nSubscribe to\nThe Economic Times Prime\nand read the\nET ePaper\nonline.\nMore\nLess\nNEXT READ\nA quick guide to WeWork offerings to suit every team\'s need\nTop 7 reasons why enterprises and large companies are moving towards flexible workspaces\nSC to hear Md Faizal\'s plea to be reinstated as MP today\nChiranjeevi, Nagarjuna, Allu Aravind hold discussions with Anurag Thakur on film industry\nCarrying an evolutionary design philosophy: How the brand made it to the OnePlus 10 Series’ Design\nDesigned to offer a top-notch experience, the OnePlus 10 Pro 5G is here to jazz up your work and play\nCherry Blossom Festival 2024: CM Conrad K Sangma shares the blueprint for Meghalaya’s music and tourism economy\nEPAM and GCCs in India: Driving Mutual Growth and Development through Modern Engineering\nDirty cars now becoming cool in Bengaluru? Car wash business takes a hit amid water crisis\nUttarakhand gears up for prosperity: Global Investors Summit inaugurated by PM Modi\nAmazon Super Saver Days - Upto 70% off on Appliances, Electronics and more....\nNEXT STORY\nX\nBusiness News\n›\nNews\n›\nBengaluru News\n›\n\'At least life decent in Pune\': Man moves to Bengaluru after 40% salary hike, says Rs 25 LPA is \'peanuts\' to live in IT capital\nPopular Categories\nIndia\nIPL 2025\nWeb Stories\nEconomy\nPolitics\nNewsblogs\nElections\nDefence\nInternational\nET Explains\nScience\nSports\nCompany\nIndustry\nDecoded\nMorning Brief Podcast\nET Evoke\nEnvironment\nVideos\nLatest News\nHot on Web\nIPL 2025 Opening Ceremony Live Updates\nSRH VS RR Live Score\nIPL 2025 SRH vs RR Live Streaming\nSRH vs RR Weather report\nIPL Today MatchSRH vs RR Playing 11\nRCB vs KKR Live Streaming\nHDFC Embassy Fixed Deposit\nLok Adalat 2025 for Traffic Challan\nAdvance Tax Deadline\nCUET UG 2025 Registration\nBest Conservative Hybrid Mutual Funds\nBitcoin Price Today\nTata Stocks\nWhy Stock Market is Up Today\nIncome Tax New Tax Regime\nNifty Today\nBajaj Finance Share Price\nHindalco Share Price\nIn Case you missed it\nRR VS SRH Live Cricket Score\nSunrisers Hyderabad vs Rajasthan Royals Live Streaming\nSRH vs RR Pitch Report\nIPL 2025 SRH vs RR Head to Head Record\nKKR vs RCB Pitch Report\nIndia Obesity Crisis\nSheetala Saptami 2025\nEli Lilly Weight-loss Drug\nAngel Numbers\nMen\'s March Madness bracket 2025\nWorld Sparrow Day 2025\nnasa astronauts return Live Updates\nIIT JAM 2025\nStock Market LIVE Updates\nAurangzeb tomb\nMaharashtra Nagpur violence\nPlayers Championship Playoff 2025\nRCB Unbox Event 2025 Live Streaming\nTop Searched Companies\nIRFC share price\nSuzlon share price\nIREDA share price\nTATA Motors share price\nYes bank share price\nHDFC Bank share price\nNHPC share price\nRVNL share price\nSBI share price\nTata power share price\nTata steel share price\nAdani power share price\nPaytm share price\nPNB share price\nZomato share price\nBEL share price\nBHEL share price\nInfosys share price\nIRCTC share price\nITC share price\nJIO finance share price\nLIC share price\nReliance share price\nHAL share price\nJP Power share price\nNBCC share price\nTCS share price\nVedanta share price\nWipro share price\nIOC share price\nIrcon share price\nSAIL share price\nSJVN share price\nGAIL share price\nHUDCO share price\nREC share price\nReliance Power share price\nTata Technologies share price\nVodafone idea share price\nAdani Enterprises share price\nAdani Green share price\nAdani Port share price\nAshok Leyland share price\nBank of Baroda share price\nBSE share price\nCanara Bank share price\nCDSL share price\nCoal India share price\nHFCL share price\nIDFC First Bank share price\nLatest News\nPrivate sector banks report pressure on profits in Q3 amid higher provisioning, NIM pressure\nStumbling stock market raises specter of Dot-Com era reckoning\nAre we any closer to finding MH370? Expert offers chilling new \'ghost signals\' theory to pinpoint the plane\nHamas says Israeli strike kills political bureau member\nPakistan army says it killed 16 Islamist militants on Afghan border\nIPL 2025: Records that could be broken by MS Dhoni and Rohit Sharma in the MI vs CSK \'El Clasico\' clash\nNYT Connections #651, March 23, 2025: Answers and hints to solve the Sunday brain teaser\nSigns of early recovery of China\'s diamond industry sparks optimism for Indian exports: GJEPC\nTwo months into Trump\'s second administration, news industry faces challenges from all directions\nBosch: Legacy season 3 release date: When and where to watch final season?\nESDS Software to file DRHP this week to raise upto Rs 700 crore through IPO\nCalculus Group, HRDS India sign Rs 1,000-crore pact to deploy AI-enabled digital tech in rural areas\nKremlin says \'difficult negotiations\' ahead on Ukraine\nElon Musk’s bizarre cutlery trick at Donald Trump’s Mar-a-Lago dinner goes viral. Tech mogul\'s antics leave the internet in splits\nBJP leader Suvendu Adhikari calls for Hindu unity ahead of 2026 Bengal polls to dismantle TMC govt\nDownload ET APP\nFollow us on\nPowered by\nbecome a member\nTerms of Use & Grievance Redressal Policy\nDNPA Code of Ethics\n|\nPrivacy Policy\n|\nArchive\n|\nDelete Data\n|\nFeedback\n|\nCopyright © 2025 Bennett, Coleman & Co. Ltd. All rights reserved. For reprint rights:\nTimes Syndication Service\nDo Not Sell My Personal Information\nHome\nETPrime\nMarkets\nToday\'s Paper\nMarket Data\nNews\nIndustry\nRISE\nPolitics\nWealth\nMutual Funds\nTech\nAI\nCareers\nOpinion\nNRI\nPanache\nWealth Edition\nPortfolio\nX\nPopular News\nEgypt’s Giza pyramids mystery deepens: Radar finds underground structures twice as deep as the Eiffel Tower, stretching across 2 km\nPrices to come down? After being rejected by Poland, Finland and Denmark, these countries will supply eggs to the U.S\nU.S. travel losing appeal? Travel agents now advising clients to avoid USA over rising safety concerns\nBihar Board 12th Result 2025: Expected release date, how to check online, and key details\n90% of coding by AI, fewer jobs for software engineers: Zoho’s Sridhar Vembu and OpenAI’s Sam Altman give techies a reality check\n\nSummary:'}], 'model': 'llama3-8b-8192', 'max_tokens': 1024, 'temperature': 0.7}}
-2025-03-28 23:43:44,852 - DEBUG - Sending HTTP Request: POST https://api.groq.com/openai/v1/chat/completions
-2025-03-28 23:43:44,853 - DEBUG - connect_tcp.started host='api.groq.com' port=443 local_address=None timeout=5.0 socket_options=None
-2025-03-28 23:43:44,869 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000023E95751DF0>
-2025-03-28 23:43:44,870 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000023E954290D0> server_hostname='api.groq.com' timeout=5.0
-2025-03-28 23:43:44,888 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000023E95751DC0>
-2025-03-28 23:43:44,888 - DEBUG - send_request_headers.started request=<Request [b'POST']>
-2025-03-28 23:43:44,889 - DEBUG - send_request_headers.complete
-2025-03-28 23:43:44,889 - DEBUG - send_request_body.started request=<Request [b'POST']>
-2025-03-28 23:43:44,890 - DEBUG - send_request_body.complete
-2025-03-28 23:43:44,890 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
-2025-03-28 23:43:45,779 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 28 Mar 2025 18:13:45 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'Cache-Control', b'private, max-age=0, no-store, no-cache, must-revalidate'), (b'Vary', b'Origin'), (b'X-Groq-Region', b'gcp-asia-south1'), (b'X-Ratelimit-Limit-Requests', b'14400'), (b'X-Ratelimit-Limit-Tokens', b'6000'), (b'X-Ratelimit-Remaining-Requests', b'14399'), (b'X-Ratelimit-Remaining-Tokens', b'3616'), (b'X-Ratelimit-Reset-Requests', b'6s'), (b'X-Ratelimit-Reset-Tokens', b'23.84s'), (b'X-Request-Id', b'req_01jqezbfh2fbtbj47g4xy86ta6'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=UVXY5a3.WYW1xjUrTQnqXonjroAFOK32a8O2EtGKiZw-1743185625-1.0.1.1-NOZvycRgfOQw7vhYNsfpKg4cGYay217o_wyuy27W16AXuSjMU6unBcn2hxUpvw65wRz.625GN9VuC.k70Ga8hZmBmD9yrGZ4fOV3MXRTUUA; path=/; expires=Fri, 28-Mar-25 18:43:45 GMT; domain=.groq.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'92791a692d5f4284-BOM'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
-2025-03-28 23:43:45,780 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
-2025-03-28 23:43:45,781 - DEBUG - receive_response_body.started request=<Request [b'POST']>
-2025-03-28 23:43:45,781 - DEBUG - receive_response_body.complete
-2025-03-28 23:43:45,781 - DEBUG - response_closed.started
-2025-03-28 23:43:45,782 - DEBUG - response_closed.complete
-2025-03-28 23:43:45,782 - DEBUG - HTTP Response: POST https://api.groq.com/openai/v1/chat/completions "200 OK" Headers({'date': 'Fri, 28 Mar 2025 18:13:45 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cache-control': 'private, max-age=0, no-store, no-cache, must-revalidate', 'vary': 'Origin', 'x-groq-region': 'gcp-asia-south1', 'x-ratelimit-limit-requests': '14400', 'x-ratelimit-limit-tokens': '6000', 'x-ratelimit-remaining-requests': '14399', 'x-ratelimit-remaining-tokens': '3616', 'x-ratelimit-reset-requests': '6s', 'x-ratelimit-reset-tokens': '23.84s', 'x-request-id': 'req_01jqezbfh2fbtbj47g4xy86ta6', 'cf-cache-status': 'DYNAMIC', 'set-cookie': '__cf_bm=UVXY5a3.WYW1xjUrTQnqXonjroAFOK32a8O2EtGKiZw-1743185625-1.0.1.1-NOZvycRgfOQw7vhYNsfpKg4cGYay217o_wyuy27W16AXuSjMU6unBcn2hxUpvw65wRz.625GN9VuC.k70Ga8hZmBmD9yrGZ4fOV3MXRTUUA; path=/; expires=Fri, 28-Mar-25 18:43:45 GMT; domain=.groq.com; HttpOnly; Secure; SameSite=None', 'server': 'cloudflare', 'cf-ray': '92791a692d5f4284-BOM', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
-2025-03-28 23:43:45,785 - INFO - 127.0.0.1 - - [28/Mar/2025 23:43:45] "POST /summarize HTTP/1.1" 200 -
-2025-03-28 23:46:04,833 - DEBUG - [SCRAPE-1743185764833661000] Starting scrape request
-2025-03-28 23:46:04,833 - DEBUG - [SCRAPE-1743185764833661000] Fetching page content...
-2025-03-28 23:46:04,833 - DEBUG - [SCRAPE-1743185764833661000] Fetching URL with headers: {'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Referer': 'https://www.google.com/', 'DNT': '1'}
-2025-03-28 23:46:07,452 - DEBUG - Starting new HTTPS connection (1): m.economictimes.com:443
-2025-03-28 23:46:07,456 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
-2025-03-28 23:46:07,553 - DEBUG - https://m.economictimes.com:443 "GET /news/bengaluru-news/at-least-life-decent-in-pune-man-moves-to-bengaluru-after-40-salary-hike-says-rs-25-lpa-is-peanuts-to-live-in-it-capital/amp_articleshow/119376579.cms HTTP/1.1" 200 41657
-2025-03-28 23:46:07,563 - DEBUG - [SCRAPE-1743185764833661000] Processing content...
-2025-03-28 23:46:07,590 - DEBUG - close.started
-2025-03-28 23:46:07,593 - DEBUG - close.complete
-2025-03-28 23:46:07,656 - DEBUG - [SCRAPE-1743185764833661000] Cleaning content (length: 145195)
-2025-03-28 23:46:07,683 - DEBUG - [SCRAPE-1743185764833661000] Removed tags: header, script
-2025-03-28 23:46:07,684 - DEBUG - [SCRAPE-1743185764833661000] Found 0 comments
-2025-03-28 23:46:07,684 - DEBUG - [SCRAPE-1743185764833661000] Final line count: 261
-2025-03-28 23:46:07,685 - DEBUG - [SCRAPE-1743185764833661000] Starting screenshot for https://m.economictimes.com/news/bengaluru-news/at-least-life-decent-in-pune-man-moves-to-bengaluru-after-40-salary-hike-says-rs-25-lpa-is-peanuts-to-live-in-it-capital/amp_articleshow/119376579.cms
-2025-03-28 23:46:07,685 - DEBUG - Using proactor: IocpProactor
-2025-03-28 23:46:07,868 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\playwright\\_impl\\_connection.py', reloading
-2025-03-28 23:46:07,870 - INFO -  * Detected change in 'C:\\Python312\\Lib\\asyncio\\events.py', reloading
-2025-03-28 23:46:07,870 - INFO -  * Detected change in 'C:\\Python312\\Lib\\asyncio\\base_events.py', reloading
-2025-03-28 23:46:07,871 - INFO -  * Detected change in 'C:\\Python312\\Lib\\asyncio\\windows_events.py', reloading
-2025-03-28 23:46:07,872 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\playwright\\sync_api\\_context_manager.py', reloading
-2025-03-28 23:46:08,712 - INFO -  * Restarting with watchdog (windowsapi)
-2025-03-28 23:46:10,479 - INFO - Starting Flask application
-2025-03-28 23:46:10,498 - WARNING -  * Debugger is active!
-2025-03-28 23:46:10,510 - INFO -  * Debugger PIN: 129-054-596
-2025-03-28 23:46:17,462 - DEBUG - [SCRAPE-1743185777462361700] Starting scrape request
-2025-03-28 23:46:17,464 - DEBUG - [SCRAPE-1743185777462361700] Fetching page content...
-2025-03-28 23:46:17,464 - DEBUG - [SCRAPE-1743185777462361700] Fetching URL with headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Referer': 'https://www.google.com/', 'DNT': '1'}
-2025-03-28 23:46:18,091 - DEBUG - Starting new HTTPS connection (1): m.economictimes.com:443
-2025-03-28 23:46:18,140 - DEBUG - https://m.economictimes.com:443 "GET /news/bengaluru-news/at-least-life-decent-in-pune-man-moves-to-bengaluru-after-40-salary-hike-says-rs-25-lpa-is-peanuts-to-live-in-it-capital/amp_articleshow/119376579.cms HTTP/1.1" 200 41657
-2025-03-28 23:46:18,145 - DEBUG - [SCRAPE-1743185777462361700] Processing content...
-2025-03-28 23:46:18,180 - DEBUG - [SCRAPE-1743185777462361700] Cleaning content (length: 145195)
-2025-03-28 23:46:18,200 - DEBUG - [SCRAPE-1743185777462361700] Removed tags: script, header
-2025-03-28 23:46:18,201 - DEBUG - [SCRAPE-1743185777462361700] Found 0 comments
-2025-03-28 23:46:18,201 - DEBUG - [SCRAPE-1743185777462361700] Final line count: 261
-2025-03-28 23:46:18,201 - DEBUG - [SCRAPE-1743185777462361700] Starting screenshot for https://m.economictimes.com/news/bengaluru-news/at-least-life-decent-in-pune-man-moves-to-bengaluru-after-40-salary-hike-says-rs-25-lpa-is-peanuts-to-live-in-it-capital/amp_articleshow/119376579.cms
-2025-03-28 23:46:18,202 - DEBUG - Using proactor: IocpProactor
-2025-03-28 23:46:23,526 - DEBUG - [SCRAPE-1743185777462361700] Navigating to URL...
-2025-03-28 23:46:26,560 - INFO - 127.0.0.1 - - [28/Mar/2025 23:46:26] "GET / HTTP/1.1" 200 -
-2025-03-28 23:46:26,650 - INFO - 127.0.0.1 - - [28/Mar/2025 23:46:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-28 23:46:26,672 - DEBUG - [SCRAPE-1743185777462361700] Taking screenshot...
-2025-03-28 23:46:27,777 - INFO - 127.0.0.1 - - [28/Mar/2025 23:46:27] "POST /scrape HTTP/1.1" 200 -
-2025-03-28 23:46:30,974 - DEBUG - [SCRAPE-1743185790974475400] Starting scrape request
-2025-03-28 23:46:30,975 - DEBUG - [SCRAPE-1743185790974475400] Fetching page content...
-2025-03-28 23:46:30,975 - DEBUG - [SCRAPE-1743185790974475400] Fetching URL with headers: {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Referer': 'https://www.google.com/', 'DNT': '1'}
-2025-03-28 23:46:32,889 - DEBUG - Starting new HTTPS connection (1): m.economictimes.com:443
-2025-03-28 23:46:32,971 - DEBUG - https://m.economictimes.com:443 "GET /news/bengaluru-news/at-least-life-decent-in-pune-man-moves-to-bengaluru-after-40-salary-hike-says-rs-25-lpa-is-peanuts-to-live-in-it-capital/amp_articleshow/119376579.cms HTTP/1.1" 200 41657
-2025-03-28 23:46:32,979 - DEBUG - [SCRAPE-1743185790974475400] Processing content...
-2025-03-28 23:46:33,008 - DEBUG - [SCRAPE-1743185790974475400] Cleaning content (length: 145195)
-2025-03-28 23:46:33,067 - DEBUG - [SCRAPE-1743185790974475400] Removed tags: script, header
-2025-03-28 23:46:33,067 - DEBUG - [SCRAPE-1743185790974475400] Found 0 comments
-2025-03-28 23:46:33,068 - DEBUG - [SCRAPE-1743185790974475400] Final line count: 261
-2025-03-28 23:46:33,068 - DEBUG - [SCRAPE-1743185790974475400] Starting screenshot for https://m.economictimes.com/news/bengaluru-news/at-least-life-decent-in-pune-man-moves-to-bengaluru-after-40-salary-hike-says-rs-25-lpa-is-peanuts-to-live-in-it-capital/amp_articleshow/119376579.cms
-2025-03-28 23:46:33,068 - DEBUG - Using proactor: IocpProactor
-2025-03-28 23:46:38,415 - DEBUG - [SCRAPE-1743185790974475400] Navigating to URL...
-2025-03-28 23:47:02,864 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
-2025-03-28 23:47:04,067 - INFO -  * Restarting with watchdog (windowsapi)
-2025-03-28 23:47:05,787 - INFO - Starting Flask application
-2025-03-28 23:47:05,803 - WARNING -  * Debugger is active!
-2025-03-28 23:47:05,817 - INFO -  * Debugger PIN: 129-054-596
-2025-03-28 23:47:18,926 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
-2025-03-28 23:47:20,102 - INFO -  * Restarting with watchdog (windowsapi)
-2025-03-28 23:47:22,772 - INFO - Starting Flask application
-2025-03-28 23:47:22,789 - WARNING -  * Debugger is active!
-2025-03-28 23:47:22,803 - INFO -  * Debugger PIN: 129-054-596
-2025-03-28 23:47:23,467 - DEBUG - [SCRAPE-1743185843467794400] Starting scrape request
-2025-03-28 23:47:23,469 - DEBUG - [SCRAPE-1743185843467794400] Fetching page content...
-2025-03-28 23:47:23,469 - DEBUG - [SCRAPE-1743185843467794400] Fetching URL with headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Referer': 'https://www.google.com/', 'DNT': '1'}
-2025-03-28 23:47:24,031 - DEBUG - Starting new HTTPS connection (1): m.economictimes.com:443
-2025-03-28 23:47:24,109 - DEBUG - https://m.economictimes.com:443 "GET /news/bengaluru-news/at-least-life-decent-in-pune-man-moves-to-bengaluru-after-40-salary-hike-says-rs-25-lpa-is-peanuts-to-live-in-it-capital/amp_articleshow/119376579.cms HTTP/1.1" 200 41657
-2025-03-28 23:47:24,119 - DEBUG - [SCRAPE-1743185843467794400] Processing content...
-2025-03-28 23:47:24,151 - DEBUG - [SCRAPE-1743185843467794400] Cleaning content (length: 145195)
-2025-03-28 23:47:24,170 - DEBUG - [SCRAPE-1743185843467794400] Removed tags: header, script
-2025-03-28 23:47:24,171 - DEBUG - [SCRAPE-1743185843467794400] Found 0 comments
-2025-03-28 23:47:24,172 - DEBUG - [SCRAPE-1743185843467794400] Final line count: 261
-2025-03-28 23:47:24,172 - DEBUG - [SCRAPE-1743185843467794400] Starting screenshot for https://m.economictimes.com/news/bengaluru-news/at-least-life-decent-in-pune-man-moves-to-bengaluru-after-40-salary-hike-says-rs-25-lpa-is-peanuts-to-live-in-it-capital/amp_articleshow/119376579.cms
-2025-03-28 23:47:24,173 - DEBUG - Using proactor: IocpProactor
-2025-03-28 23:47:29,614 - DEBUG - [SCRAPE-1743185843467794400] Navigating to URL...
-2025-03-28 23:47:33,210 - DEBUG - [SCRAPE-1743185843467794400] Taking screenshot...
-2025-03-28 23:47:34,048 - INFO - 127.0.0.1 - - [28/Mar/2025 23:47:34] "POST /scrape HTTP/1.1" 200 -
-2025-03-28 23:47:34,106 - INFO - 127.0.0.1 - - [28/Mar/2025 23:47:34] "GET /static/screenshots/screenshot_1743185853.png HTTP/1.1" 200 -
-2025-03-28 23:48:13,641 - INFO - 127.0.0.1 - - [28/Mar/2025 23:48:13] "GET / HTTP/1.1" 200 -
-2025-03-28 23:48:13,672 - INFO - 127.0.0.1 - - [28/Mar/2025 23:48:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
-2025-03-28 23:48:29,113 - INFO - Starting Flask application
-2025-03-28 23:48:29,136 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-03-30 23:03:23,589 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-30 23:03:23,598 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:03:27,213 - INFO - Starting Flask application
+2025-03-30 23:03:27,222 - WARNING -  * Debugger is active!
+2025-03-30 23:03:27,234 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:03:29,342 - INFO - 127.0.0.1 - - [30/Mar/2025 23:03:29] "GET / HTTP/1.1" 200 -
+2025-03-30 23:03:29,370 - INFO - 127.0.0.1 - - [30/Mar/2025 23:03:29] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-30 23:03:47,276 - INFO - 127.0.0.1 - - [30/Mar/2025 23:03:47] "GET / HTTP/1.1" 200 -
+2025-03-30 23:03:47,319 - INFO - 127.0.0.1 - - [30/Mar/2025 23:03:47] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-30 23:03:47,708 - INFO - 127.0.0.1 - - [30/Mar/2025 23:03:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-30 23:03:52,745 - DEBUG - [SCRAPE-1743356032745339200] Starting scrape request
+2025-03-30 23:03:52,747 - DEBUG - [SCRAPE-1743356032745339200] Scraping content...
+2025-03-30 23:03:52,747 - DEBUG - [SCRAPE-1743356032745339200] Starting scrape with Crawl4aiTools
+2025-03-30 23:03:52,747 - DEBUG - Using proactor: IocpProactor
+2025-03-30 23:03:58,682 - DEBUG - [SCRAPE-1743356032745339200] Scrape completed successfully
+2025-03-30 23:03:58,684 - INFO - 127.0.0.1 - - [30/Mar/2025 23:03:58] "POST /scrape HTTP/1.1" 200 -
+2025-03-30 23:04:44,988 - DEBUG - [ANALYZE-1743356084988115200] Starting analysis request
+2025-03-30 23:04:44,991 - DEBUG - [ANALYZE-1743356084988115200] Analyzing content...
+2025-03-30 23:04:44,992 - DEBUG - [ANALYZE-1743356084988115200] Starting Gemini analysis
+2025-03-30 23:04:47,599 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-03-30 23:04:47,600 - DEBUG - load_verify_locations cafile='C:\\Python312\\Lib\\site-packages\\certifi\\cacert.pem'
+2025-03-30 23:04:47,879 - DEBUG - connect_tcp.started host='api.phidata.com' port=443 local_address=None timeout=60 socket_options=None
+2025-03-30 23:04:48,105 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001FF523BA630>
+2025-03-30 23:04:48,105 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001FF51A80ED0> server_hostname='api.phidata.com' timeout=60
+2025-03-30 23:04:48,509 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001FF523BA9C0>
+2025-03-30 23:04:48,510 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-03-30 23:04:48,510 - DEBUG - send_request_headers.complete
+2025-03-30 23:04:48,510 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-03-30 23:04:48,511 - DEBUG - send_request_body.complete
+2025-03-30 23:04:48,511 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-03-30 23:04:48,715 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 30 Mar 2025 17:34:52 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'72'), (b'Connection', b'keep-alive'), (b'server', b'uvicorn')])
+2025-03-30 23:04:48,716 - INFO - HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"
+2025-03-30 23:04:48,716 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-03-30 23:04:48,716 - DEBUG - receive_response_body.complete
+2025-03-30 23:04:48,716 - DEBUG - response_closed.started
+2025-03-30 23:04:48,717 - DEBUG - response_closed.complete
+2025-03-30 23:04:48,717 - DEBUG - close.started
+2025-03-30 23:04:48,717 - DEBUG - close.complete
+2025-03-30 23:04:48,717 - DEBUG - [ANALYZE-1743356084988115200] Analysis completed
+2025-03-30 23:04:48,718 - ERROR - [ANALYZE-1743356084988115200] Analysis failed: Object of type RunResponse is not JSON serializable
+2025-03-30 23:04:48,718 - INFO - 127.0.0.1 - - [30/Mar/2025 23:04:48] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-30 23:06:11,823 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:06:11,834 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:06:11,835 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:06:12,613 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:06:12,614 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:06:12,614 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:06:13,223 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:06:17,184 - INFO - Starting Flask application
+2025-03-30 23:06:17,194 - WARNING -  * Debugger is active!
+2025-03-30 23:06:17,210 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:06:18,123 - DEBUG - [SCRAPE-1743356178123916800] Starting scrape request
+2025-03-30 23:06:18,125 - DEBUG - [SCRAPE-1743356178123916800] Scraping content...
+2025-03-30 23:06:18,125 - DEBUG - [SCRAPE-1743356178123916800] Starting scrape with Crawl4aiTools
+2025-03-30 23:06:18,127 - DEBUG - Using proactor: IocpProactor
+2025-03-30 23:06:23,721 - DEBUG - [SCRAPE-1743356178123916800] Scrape completed successfully
+2025-03-30 23:06:23,722 - INFO - 127.0.0.1 - - [30/Mar/2025 23:06:23] "POST /scrape HTTP/1.1" 200 -
+2025-03-30 23:06:26,997 - DEBUG - [ANALYZE-1743356186997542800] Starting analysis request
+2025-03-30 23:06:27,002 - DEBUG - [ANALYZE-1743356186997542800] Analyzing content...
+2025-03-30 23:06:27,003 - ERROR - [ANALYZE-1743356186997542800] Analysis failed: name 'Groq' is not defined
+2025-03-30 23:06:27,004 - DEBUG - [ANALYZE-1743356186997542800] Full traceback:
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\New folder\LLM-Scraper\app.py", line 137, in analyze_content
+    client = Groq(api_key=API_KEY)
+             ^^^^
+NameError: name 'Groq' is not defined
+
+2025-03-30 23:06:27,005 - INFO - 127.0.0.1 - - [30/Mar/2025 23:06:27] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2025-03-30 23:08:36,694 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:08:38,019 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:08:42,009 - INFO - Starting Flask application
+2025-03-30 23:08:42,018 - WARNING -  * Debugger is active!
+2025-03-30 23:08:42,032 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:12:06,612 - INFO -  * Detected change in 'C:\\Python312\\Lib\\logging\\__init__.py', reloading
+2025-03-30 23:12:07,534 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:12:11,841 - INFO - Starting Flask application
+2025-03-30 23:12:11,851 - WARNING -  * Debugger is active!
+2025-03-30 23:12:11,863 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:12:56,457 - INFO - Starting Flask application
+2025-03-30 23:12:56,480 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.0.185:5000
-2025-03-28 23:48:29,136 - INFO - [33mPress CTRL+C to quit[0m
-2025-03-28 23:48:29,145 - INFO -  * Restarting with watchdog (windowsapi)
-2025-03-28 23:48:30,578 - INFO - Starting Flask application
-2025-03-28 23:48:30,591 - WARNING -  * Debugger is active!
-2025-03-28 23:48:30,603 - INFO -  * Debugger PIN: 129-054-596
-2025-03-28 23:48:46,058 - DEBUG - [SCRAPE-1743185926058251300] Starting scrape request
-2025-03-28 23:48:46,059 - DEBUG - [SCRAPE-1743185926058251300] Fetching page content...
-2025-03-28 23:48:46,059 - DEBUG - [SCRAPE-1743185926058251300] Fetching URL with headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Referer': 'https://www.google.com/', 'DNT': '1'}
-2025-03-28 23:48:47,790 - DEBUG - Starting new HTTPS connection (1): www.nykaa.com:443
-2025-03-28 23:48:47,979 - DEBUG - https://www.nykaa.com:443 "GET / HTTP/1.1" 200 None
-2025-03-28 23:48:48,003 - DEBUG - [SCRAPE-1743185926058251300] Processing content...
-2025-03-28 23:48:48,024 - DEBUG - [SCRAPE-1743185926058251300] Cleaning content (length: 659451)
-2025-03-28 23:48:48,041 - ERROR - [SCRAPE-1743185926058251300] Cleaning failed: sequence item 0: expected str instance, NoneType found
-2025-03-28 23:48:48,041 - DEBUG - [SCRAPE-1743185926058251300] Content sample (first 200 chars): <body><div id="app"><style data-emotion-css="nbt2jv">html{line-height:1.15;-webkit-text-size-adjust:100%;}body{margin:0;}main{display:block;}h1{font-size:2em;margin:0.67em 0;}hr{box-sizing:content-box
-2025-03-28 23:48:48,041 - ERROR - [SCRAPE-1743185926058251300] Scraping failed: sequence item 0: expected str instance, NoneType found
-2025-03-28 23:48:48,042 - DEBUG - [SCRAPE-1743185926058251300] Full traceback:
-Traceback (most recent call last):
-  File "C:\Users\Lenovo\Desktop\New folder\LLM-Scraper\app.py", line 264, in scrape_url
-    cleaned_content = clean(str(body), debug_id)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Lenovo\Desktop\New folder\LLM-Scraper\app.py", line 68, in clean
-    logger.debug(f"[{debug_id}] Removed tags: {', '.join(removed_tags) or 'None'}")
-                                               ^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: sequence item 0: expected str instance, NoneType found
-
-2025-03-28 23:48:48,044 - INFO - 127.0.0.1 - - [28/Mar/2025 23:48:48] "[35m[1mPOST /scrape HTTP/1.1[0m" 500 -
-2025-03-28 23:48:53,187 - DEBUG - [SCRAPE-1743185933187190700] Starting scrape request
-2025-03-28 23:48:53,188 - DEBUG - [SCRAPE-1743185933187190700] Fetching page content...
-2025-03-28 23:48:53,188 - DEBUG - [SCRAPE-1743185933187190700] Fetching URL with headers: {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Connection': 'keep-alive', 'Referer': 'https://www.google.com/', 'DNT': '1'}
-2025-03-28 23:48:54,737 - DEBUG - Starting new HTTPS connection (1): www.nykaa.com:443
-2025-03-28 23:48:54,918 - DEBUG - https://www.nykaa.com:443 "GET / HTTP/1.1" 200 None
-2025-03-28 23:48:54,942 - DEBUG - [SCRAPE-1743185933187190700] Processing content...
-2025-03-28 23:48:54,963 - DEBUG - [SCRAPE-1743185933187190700] Cleaning content (length: 659477)
-2025-03-28 23:48:54,984 - ERROR - [SCRAPE-1743185933187190700] Cleaning failed: sequence item 0: expected str instance, NoneType found
-2025-03-28 23:48:54,984 - DEBUG - [SCRAPE-1743185933187190700] Content sample (first 200 chars): <body><div id="app"><style data-emotion-css="nbt2jv">html{line-height:1.15;-webkit-text-size-adjust:100%;}body{margin:0;}main{display:block;}h1{font-size:2em;margin:0.67em 0;}hr{box-sizing:content-box
-2025-03-28 23:48:54,984 - ERROR - [SCRAPE-1743185933187190700] Scraping failed: sequence item 0: expected str instance, NoneType found
-2025-03-28 23:48:54,985 - DEBUG - [SCRAPE-1743185933187190700] Full traceback:
-Traceback (most recent call last):
-  File "C:\Users\Lenovo\Desktop\New folder\LLM-Scraper\app.py", line 264, in scrape_url
-    cleaned_content = clean(str(body), debug_id)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Lenovo\Desktop\New folder\LLM-Scraper\app.py", line 68, in clean
-    logger.debug(f"[{debug_id}] Removed tags: {', '.join(removed_tags) or 'None'}")
-                                               ^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: sequence item 0: expected str instance, NoneType found
-
-2025-03-28 23:48:54,986 - INFO - 127.0.0.1 - - [28/Mar/2025 23:48:54] "[35m[1mPOST /scrape HTTP/1.1[0m" 500 -
-2025-03-28 23:54:23,852 - INFO - 127.0.0.1 - - [28/Mar/2025 23:54:23] "GET / HTTP/1.1" 200 -
-2025-03-28 23:54:23,927 - INFO - 127.0.0.1 - - [28/Mar/2025 23:54:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-30 23:12:56,481 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-30 23:12:56,492 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:13:00,715 - INFO - Starting Flask application
+2025-03-30 23:13:00,724 - WARNING -  * Debugger is active!
+2025-03-30 23:13:00,739 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:13:22,848 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:13:22,849 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:13:22,849 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:13:23,503 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:13:32,635 - INFO - Starting Flask application
+2025-03-30 23:13:32,657 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.185:5000
+2025-03-30 23:13:32,658 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-30 23:13:32,668 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:13:36,437 - INFO - Starting Flask application
+2025-03-30 23:13:36,449 - WARNING -  * Debugger is active!
+2025-03-30 23:13:36,463 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:13:36,494 - INFO - 127.0.0.1 - - [30/Mar/2025 23:13:36] "GET / HTTP/1.1" 200 -
+2025-03-30 23:13:36,532 - INFO - 127.0.0.1 - - [30/Mar/2025 23:13:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-30 23:13:48,504 - INFO - 127.0.0.1 - - [30/Mar/2025 23:13:48] "GET / HTTP/1.1" 200 -
+2025-03-30 23:13:48,544 - INFO - 127.0.0.1 - - [30/Mar/2025 23:13:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-30 23:14:03,689 - DEBUG - [SCRAPE-1743356643689560900] Starting scrape request
+2025-03-30 23:14:03,691 - DEBUG - [SCRAPE-1743356643689560900] Scraping content...
+2025-03-30 23:14:03,691 - DEBUG - [SCRAPE-1743356643689560900] Starting scrape with Crawl4aiTools
+2025-03-30 23:14:03,691 - DEBUG - Using proactor: IocpProactor
+2025-03-30 23:14:10,102 - DEBUG - [SCRAPE-1743356643689560900] Scrape completed successfully
+2025-03-30 23:14:10,102 - INFO - 127.0.0.1 - - [30/Mar/2025 23:14:10] "POST /scrape HTTP/1.1" 200 -
+2025-03-30 23:14:47,246 - DEBUG - [ANALYZE-1743356687246030500] Starting analysis request
+2025-03-30 23:14:47,249 - DEBUG - [ANALYZE-1743356687246030500] Analyzing content with Gemini...
+2025-03-30 23:14:47,249 - DEBUG - [ANALYZE-1743356687246030500] Starting Gemini analysis
+2025-03-30 23:14:50,935 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-03-30 23:14:50,935 - DEBUG - load_verify_locations cafile='C:\\Python312\\Lib\\site-packages\\certifi\\cacert.pem'
+2025-03-30 23:14:51,209 - DEBUG - connect_tcp.started host='api.phidata.com' port=443 local_address=None timeout=60 socket_options=None
+2025-03-30 23:14:51,459 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001A08A1BBAA0>
+2025-03-30 23:14:51,459 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001A08A712A50> server_hostname='api.phidata.com' timeout=60
+2025-03-30 23:14:51,922 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001A08A1BBA40>
+2025-03-30 23:14:51,923 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-03-30 23:14:51,923 - DEBUG - send_request_headers.complete
+2025-03-30 23:14:51,924 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-03-30 23:14:51,924 - DEBUG - send_request_body.complete
+2025-03-30 23:14:51,924 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-03-30 23:14:52,158 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 30 Mar 2025 17:44:55 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'72'), (b'Connection', b'keep-alive'), (b'server', b'uvicorn')])
+2025-03-30 23:14:52,160 - INFO - HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"
+2025-03-30 23:14:52,161 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-03-30 23:14:52,161 - DEBUG - receive_response_body.complete
+2025-03-30 23:14:52,161 - DEBUG - response_closed.started
+2025-03-30 23:14:52,162 - DEBUG - response_closed.complete
+2025-03-30 23:14:52,162 - DEBUG - close.started
+2025-03-30 23:14:52,162 - DEBUG - close.complete
+2025-03-30 23:14:52,165 - DEBUG - [ANALYZE-1743356687246030500] Analysis completed
+2025-03-30 23:14:52,165 - INFO - 127.0.0.1 - - [30/Mar/2025 23:14:52] "POST /analyze HTTP/1.1" 200 -
+2025-03-30 23:15:39,779 - DEBUG - [ANALYZE-1743356739779726500] Starting analysis request
+2025-03-30 23:15:39,785 - DEBUG - [ANALYZE-1743356739779726500] Analyzing content with Gemini...
+2025-03-30 23:15:39,786 - DEBUG - [ANALYZE-1743356739779726500] Starting Gemini analysis
+2025-03-30 23:15:42,684 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-03-30 23:15:42,685 - DEBUG - load_verify_locations cafile='C:\\Python312\\Lib\\site-packages\\certifi\\cacert.pem'
+2025-03-30 23:15:42,926 - DEBUG - connect_tcp.started host='api.phidata.com' port=443 local_address=None timeout=60 socket_options=None
+2025-03-30 23:15:43,136 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001A08AD64AA0>
+2025-03-30 23:15:43,136 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001A08A193DD0> server_hostname='api.phidata.com' timeout=60
+2025-03-30 23:15:43,549 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001A08A1BBE90>
+2025-03-30 23:15:43,549 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-03-30 23:15:43,550 - DEBUG - send_request_headers.complete
+2025-03-30 23:15:43,550 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-03-30 23:15:43,550 - DEBUG - send_request_body.complete
+2025-03-30 23:15:43,550 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-03-30 23:15:43,760 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 30 Mar 2025 17:45:47 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'72'), (b'Connection', b'keep-alive'), (b'server', b'uvicorn')])
+2025-03-30 23:15:43,760 - INFO - HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"
+2025-03-30 23:15:43,761 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-03-30 23:15:43,761 - DEBUG - receive_response_body.complete
+2025-03-30 23:15:43,761 - DEBUG - response_closed.started
+2025-03-30 23:15:43,761 - DEBUG - response_closed.complete
+2025-03-30 23:15:43,761 - DEBUG - close.started
+2025-03-30 23:15:43,761 - DEBUG - close.complete
+2025-03-30 23:15:43,762 - DEBUG - [ANALYZE-1743356739779726500] Analysis completed
+2025-03-30 23:15:43,764 - INFO - 127.0.0.1 - - [30/Mar/2025 23:15:43] "POST /analyze HTTP/1.1" 200 -
+2025-03-30 23:17:20,391 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\_pytest\\junitxml.py', reloading
+2025-03-30 23:17:21,856 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:17:25,610 - INFO - Starting Flask application
+2025-03-30 23:17:25,620 - WARNING -  * Debugger is active!
+2025-03-30 23:17:25,632 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:17:38,133 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:17:38,133 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:17:38,134 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:17:39,266 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:17:49,447 - INFO - Starting Flask application
+2025-03-30 23:17:49,471 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.185:5000
+2025-03-30 23:17:49,472 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-30 23:17:49,487 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:17:53,629 - INFO - Starting Flask application
+2025-03-30 23:17:53,641 - WARNING -  * Debugger is active!
+2025-03-30 23:17:53,658 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:17:56,896 - INFO - 127.0.0.1 - - [30/Mar/2025 23:17:56] "GET / HTTP/1.1" 200 -
+2025-03-30 23:17:56,928 - INFO - 127.0.0.1 - - [30/Mar/2025 23:17:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-30 23:18:09,669 - DEBUG - [SCRAPE-1743356889669966800] Starting scrape request
+2025-03-30 23:18:09,672 - DEBUG - [SCRAPE-1743356889669966800] Scraping content...
+2025-03-30 23:18:09,672 - DEBUG - [SCRAPE-1743356889669966800] Starting scrape with Crawl4aiTools
+2025-03-30 23:18:09,673 - DEBUG - Using proactor: IocpProactor
+2025-03-30 23:18:15,942 - DEBUG - [SCRAPE-1743356889669966800] Scrape completed successfully
+2025-03-30 23:18:15,943 - INFO - 127.0.0.1 - - [30/Mar/2025 23:18:15] "POST /scrape HTTP/1.1" 200 -
+2025-03-30 23:19:05,433 - DEBUG - [ANALYZE-1743356945433217200] Starting analysis request
+2025-03-30 23:19:05,436 - DEBUG - [ANALYZE-1743356945433217200] Analyzing content with Gemini...
+2025-03-30 23:19:05,436 - DEBUG - [ANALYZE-1743356945433217200] Starting Gemini analysis
+2025-03-30 23:19:10,111 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-03-30 23:19:10,112 - DEBUG - load_verify_locations cafile='C:\\Python312\\Lib\\site-packages\\certifi\\cacert.pem'
+2025-03-30 23:19:10,369 - DEBUG - connect_tcp.started host='api.phidata.com' port=443 local_address=None timeout=60 socket_options=None
+2025-03-30 23:19:10,612 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001E8DC03AC60>
+2025-03-30 23:19:10,612 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001E8DB701150> server_hostname='api.phidata.com' timeout=60
+2025-03-30 23:19:11,062 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001E8DC03ADE0>
+2025-03-30 23:19:11,063 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-03-30 23:19:11,064 - DEBUG - send_request_headers.complete
+2025-03-30 23:19:11,064 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-03-30 23:19:11,065 - DEBUG - send_request_body.complete
+2025-03-30 23:19:11,065 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-03-30 23:19:11,292 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 30 Mar 2025 17:49:14 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'72'), (b'Connection', b'keep-alive'), (b'server', b'uvicorn')])
+2025-03-30 23:19:11,293 - INFO - HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"
+2025-03-30 23:19:11,294 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-03-30 23:19:11,295 - DEBUG - receive_response_body.complete
+2025-03-30 23:19:11,295 - DEBUG - response_closed.started
+2025-03-30 23:19:11,295 - DEBUG - response_closed.complete
+2025-03-30 23:19:11,295 - DEBUG - close.started
+2025-03-30 23:19:11,297 - DEBUG - close.complete
+2025-03-30 23:19:11,298 - DEBUG - [ANALYZE-1743356945433217200] Analysis completed
+2025-03-30 23:19:11,298 - INFO - 127.0.0.1 - - [30/Mar/2025 23:19:11] "POST /analyze HTTP/1.1" 200 -
+2025-03-30 23:25:14,506 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:25:14,507 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:25:14,507 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:25:16,032 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:25:19,957 - INFO - Starting Flask application
+2025-03-30 23:25:19,967 - WARNING -  * Debugger is active!
+2025-03-30 23:25:19,982 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:26:48,218 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:26:48,219 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:26:48,219 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:26:49,266 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:26:53,195 - INFO - Starting Flask application
+2025-03-30 23:26:53,206 - WARNING -  * Debugger is active!
+2025-03-30 23:26:53,221 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:26:56,791 - INFO - 127.0.0.1 - - [30/Mar/2025 23:26:56] "GET / HTTP/1.1" 200 -
+2025-03-30 23:26:56,827 - INFO - 127.0.0.1 - - [30/Mar/2025 23:26:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-30 23:27:00,321 - DEBUG - [SCRAPE-1743357420321768500] Starting scrape request
+2025-03-30 23:27:00,324 - DEBUG - [SCRAPE-1743357420321768500] Scraping content...
+2025-03-30 23:27:00,324 - DEBUG - [SCRAPE-1743357420321768500] Starting scrape with Crawl4aiTools
+2025-03-30 23:27:00,324 - DEBUG - Using proactor: IocpProactor
+2025-03-30 23:27:06,552 - DEBUG - [SCRAPE-1743357420321768500] Scrape completed successfully
+2025-03-30 23:27:06,553 - INFO - 127.0.0.1 - - [30/Mar/2025 23:27:06] "POST /scrape HTTP/1.1" 200 -
+2025-03-30 23:27:30,534 - DEBUG - [ANALYZE-1743357450534311600] Starting analysis request
+2025-03-30 23:27:30,537 - DEBUG - [ANALYZE-1743357450534311600] Analyzing content with Gemini...
+2025-03-30 23:27:30,537 - DEBUG - [ANALYZE-1743357450534311600] Starting Gemini analysis
+2025-03-30 23:27:33,287 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-03-30 23:27:33,287 - DEBUG - load_verify_locations cafile='C:\\Python312\\Lib\\site-packages\\certifi\\cacert.pem'
+2025-03-30 23:27:33,529 - DEBUG - connect_tcp.started host='api.phidata.com' port=443 local_address=None timeout=60 socket_options=None
+2025-03-30 23:27:33,781 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001FCC1C3AC30>
+2025-03-30 23:27:33,782 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001FCC13422D0> server_hostname='api.phidata.com' timeout=60
+2025-03-30 23:27:34,201 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001FCC1C3B980>
+2025-03-30 23:27:34,202 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-03-30 23:27:34,202 - DEBUG - send_request_headers.complete
+2025-03-30 23:27:34,203 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-03-30 23:27:34,203 - DEBUG - send_request_body.complete
+2025-03-30 23:27:34,203 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-03-30 23:27:34,410 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 30 Mar 2025 17:57:37 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'72'), (b'Connection', b'keep-alive'), (b'server', b'uvicorn')])
+2025-03-30 23:27:34,410 - INFO - HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"
+2025-03-30 23:27:34,411 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-03-30 23:27:34,411 - DEBUG - receive_response_body.complete
+2025-03-30 23:27:34,411 - DEBUG - response_closed.started
+2025-03-30 23:27:34,412 - DEBUG - response_closed.complete
+2025-03-30 23:27:34,412 - DEBUG - close.started
+2025-03-30 23:27:34,412 - DEBUG - close.complete
+2025-03-30 23:27:34,413 - INFO - 127.0.0.1 - - [30/Mar/2025 23:27:34] "POST /analyze HTTP/1.1" 200 -
+2025-03-30 23:32:15,924 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:32:15,925 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:32:15,925 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:32:16,454 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:32:20,667 - INFO - Starting Flask application
+2025-03-30 23:32:20,677 - WARNING -  * Debugger is active!
+2025-03-30 23:32:20,692 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:32:27,175 - INFO - 127.0.0.1 - - [30/Mar/2025 23:32:27] "GET / HTTP/1.1" 200 -
+2025-03-30 23:32:27,204 - INFO - 127.0.0.1 - - [30/Mar/2025 23:32:27] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-30 23:32:30,772 - DEBUG - [SCRAPE-1743357750772953500] Starting scrape request
+2025-03-30 23:32:30,775 - DEBUG - [SCRAPE-1743357750772953500] Scraping content...
+2025-03-30 23:32:30,775 - DEBUG - [SCRAPE-1743357750772953500] Starting scrape with Crawl4aiTools
+2025-03-30 23:32:30,775 - DEBUG - Using proactor: IocpProactor
+2025-03-30 23:32:36,216 - DEBUG - [SCRAPE-1743357750772953500] Scrape completed successfully
+2025-03-30 23:32:36,218 - INFO - 127.0.0.1 - - [30/Mar/2025 23:32:36] "POST /scrape HTTP/1.1" 200 -
+2025-03-30 23:33:06,764 - DEBUG - [ANALYZE-1743357786764099900] Starting analysis request
+2025-03-30 23:33:06,769 - DEBUG - [ANALYZE-1743357786764099900] Getting clean Gemini response...
+2025-03-30 23:33:06,769 - DEBUG - [ANALYZE-1743357786764099900] Starting Gemini analysis
+2025-03-30 23:33:09,088 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-03-30 23:33:09,089 - DEBUG - load_verify_locations cafile='C:\\Python312\\Lib\\site-packages\\certifi\\cacert.pem'
+2025-03-30 23:33:09,366 - DEBUG - connect_tcp.started host='api.phidata.com' port=443 local_address=None timeout=60 socket_options=None
+2025-03-30 23:33:09,616 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001A9EDF97F80>
+2025-03-30 23:33:09,616 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001A9ED5AEE50> server_hostname='api.phidata.com' timeout=60
+2025-03-30 23:33:10,020 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001A9EDF7D730>
+2025-03-30 23:33:10,020 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-03-30 23:33:10,021 - DEBUG - send_request_headers.complete
+2025-03-30 23:33:10,021 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-03-30 23:33:10,022 - DEBUG - send_request_body.complete
+2025-03-30 23:33:10,022 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-03-30 23:33:10,228 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 30 Mar 2025 18:03:13 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'72'), (b'Connection', b'keep-alive'), (b'server', b'uvicorn')])
+2025-03-30 23:33:10,229 - INFO - HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"
+2025-03-30 23:33:10,230 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-03-30 23:33:10,230 - DEBUG - receive_response_body.complete
+2025-03-30 23:33:10,230 - DEBUG - response_closed.started
+2025-03-30 23:33:10,231 - DEBUG - response_closed.complete
+2025-03-30 23:33:10,231 - DEBUG - close.started
+2025-03-30 23:33:10,231 - DEBUG - close.complete
+2025-03-30 23:33:10,232 - INFO - 127.0.0.1 - - [30/Mar/2025 23:33:10] "POST /analyze HTTP/1.1" 200 -
+2025-03-30 23:35:51,738 - INFO -  * Detected change in 'C:\\Python312\\Lib\\re\\__init__.py', reloading
+2025-03-30 23:35:52,402 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:35:52,403 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:35:52,403 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:35:52,404 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-30 23:35:53,157 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:38:04,074 - INFO - Starting Flask application
+2025-03-30 23:38:04,092 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.185:5000
+2025-03-30 23:38:04,092 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-30 23:38:04,102 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:38:07,932 - INFO - Starting Flask application
+2025-03-30 23:38:07,941 - WARNING -  * Debugger is active!
+2025-03-30 23:38:07,956 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:38:12,340 - INFO - 127.0.0.1 - - [30/Mar/2025 23:38:12] "GET / HTTP/1.1" 200 -
+2025-03-30 23:38:12,379 - INFO - 127.0.0.1 - - [30/Mar/2025 23:38:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-30 23:38:15,635 - DEBUG - [SCRAPE-1743358095635349000] Starting scrape request
+2025-03-30 23:38:15,636 - DEBUG - [SCRAPE-1743358095635349000] Scraping content...
+2025-03-30 23:38:15,636 - DEBUG - [SCRAPE-1743358095635349000] Starting scrape with Crawl4aiTools
+2025-03-30 23:38:15,637 - DEBUG - Using proactor: IocpProactor
+2025-03-30 23:38:21,785 - DEBUG - [SCRAPE-1743358095635349000] Scrape completed successfully
+2025-03-30 23:38:21,786 - INFO - 127.0.0.1 - - [30/Mar/2025 23:38:21] "POST /scrape HTTP/1.1" 200 -
+2025-03-30 23:38:47,959 - DEBUG - [ANALYZE-1743358127959111100] Starting analysis request
+2025-03-30 23:38:47,961 - DEBUG - [ANALYZE-1743358127959111100] Getting structured Gemini response...
+2025-03-30 23:38:47,961 - DEBUG - [ANALYZE-1743358127959111100] Starting structured Gemini analysis
+2025-03-30 23:38:49,122 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-03-30 23:38:49,124 - DEBUG - load_verify_locations cafile='C:\\Python312\\Lib\\site-packages\\certifi\\cacert.pem'
+2025-03-30 23:38:49,394 - DEBUG - connect_tcp.started host='api.phidata.com' port=443 local_address=None timeout=60 socket_options=None
+2025-03-30 23:38:49,622 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000027099E178C0>
+2025-03-30 23:38:49,623 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000027099530ED0> server_hostname='api.phidata.com' timeout=60
+2025-03-30 23:38:50,047 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000027099E05700>
+2025-03-30 23:38:50,047 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-03-30 23:38:50,048 - DEBUG - send_request_headers.complete
+2025-03-30 23:38:50,049 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-03-30 23:38:50,049 - DEBUG - send_request_body.complete
+2025-03-30 23:38:50,049 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-03-30 23:38:50,263 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Sun, 30 Mar 2025 18:08:53 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'72'), (b'Connection', b'keep-alive'), (b'server', b'uvicorn')])
+2025-03-30 23:38:50,264 - INFO - HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"
+2025-03-30 23:38:50,264 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-03-30 23:38:50,264 - DEBUG - receive_response_body.complete
+2025-03-30 23:38:50,265 - DEBUG - response_closed.started
+2025-03-30 23:38:50,265 - DEBUG - response_closed.complete
+2025-03-30 23:38:50,265 - DEBUG - close.started
+2025-03-30 23:38:50,266 - DEBUG - close.complete
+2025-03-30 23:38:50,266 - INFO - 127.0.0.1 - - [30/Mar/2025 23:38:50] "POST /analyze HTTP/1.1" 200 -
+2025-03-30 23:39:27,044 - INFO - Starting Flask application
+2025-03-30 23:39:27,068 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.185:5000
+2025-03-30 23:39:27,070 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-30 23:39:27,080 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:39:31,678 - INFO - Starting Flask application
+2025-03-30 23:39:31,690 - WARNING -  * Debugger is active!
+2025-03-30 23:39:31,708 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:39:52,878 - INFO - Starting Flask application
+2025-03-30 23:39:52,896 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.185:5000
+2025-03-30 23:39:52,896 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-30 23:39:52,906 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:39:56,756 - INFO - Starting Flask application
+2025-03-30 23:39:56,766 - WARNING -  * Debugger is active!
+2025-03-30 23:39:56,779 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:53:02,548 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\pyparsing\\core.py', reloading
+2025-03-30 23:53:03,769 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:53:07,688 - INFO - Starting Flask application
+2025-03-30 23:53:07,701 - WARNING -  * Debugger is active!
+2025-03-30 23:53:07,716 - INFO -  * Debugger PIN: 129-054-596
+2025-03-30 23:53:16,972 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\playwright\\_impl\\_connection.py', reloading
+2025-03-30 23:53:16,973 - INFO -  * Detected change in 'C:\\Python312\\Lib\\asyncio\\events.py', reloading
+2025-03-30 23:53:16,974 - INFO -  * Detected change in 'C:\\Python312\\Lib\\asyncio\\base_events.py', reloading
+2025-03-30 23:53:16,975 - INFO -  * Detected change in 'C:\\Python312\\Lib\\asyncio\\windows_events.py', reloading
+2025-03-30 23:53:16,975 - INFO -  * Detected change in 'C:\\Python312\\Lib\\asyncio\\runners.py', reloading
+2025-03-30 23:53:16,976 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\phi\\tools\\crawl4ai_tools.py', reloading
+2025-03-30 23:53:16,986 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\playwright\\_impl\\_browser_type.py', reloading
+2025-03-30 23:53:16,988 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\playwright\\async_api\\_generated.py', reloading
+2025-03-30 23:53:16,989 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\crawl4ai\\browser_manager.py', reloading
+2025-03-30 23:53:16,990 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\crawl4ai\\async_crawler_strategy.py', reloading
+2025-03-30 23:53:16,992 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\crawl4ai\\async_webcrawler.py', reloading
+2025-03-30 23:53:18,407 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-30 23:53:22,357 - INFO - Starting Flask application
+2025-03-30 23:53:22,368 - WARNING -  * Debugger is active!
+2025-03-30 23:53:22,380 - INFO -  * Debugger PIN: 129-054-596
+2025-03-31 16:58:04,275 - INFO - Starting Flask application
+2025-03-31 16:58:04,298 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.185:5000
+2025-03-31 16:58:04,299 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-31 16:58:04,315 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-31 16:58:07,972 - INFO - Starting Flask application
+2025-03-31 16:58:07,981 - WARNING -  * Debugger is active!
+2025-03-31 16:58:07,996 - INFO -  * Debugger PIN: 129-054-596
+2025-03-31 16:58:13,616 - INFO - 127.0.0.1 - - [31/Mar/2025 16:58:13] "GET / HTTP/1.1" 200 -
+2025-03-31 16:58:13,650 - INFO - 127.0.0.1 - - [31/Mar/2025 16:58:13] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-03-31 16:58:14,014 - INFO - 127.0.0.1 - - [31/Mar/2025 16:58:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-31 16:58:27,698 - DEBUG - [SCRAPE-1743420507697592800] Starting scrape request
+2025-03-31 16:58:27,701 - DEBUG - [SCRAPE-1743420507697592800] Scraping content...
+2025-03-31 16:58:27,701 - DEBUG - [SCRAPE-1743420507697592800] Starting scrape with Crawl4aiTools
+2025-03-31 16:58:27,702 - DEBUG - Using proactor: IocpProactor
+2025-03-31 16:58:28,848 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\werkzeug\\debug\\__init__.py', reloading
+2025-03-31 16:58:28,849 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\werkzeug\\serving.py', reloading
+2025-03-31 16:58:28,851 - INFO -  * Detected change in 'C:\\Python312\\Lib\\http\\server.py', reloading
+2025-03-31 16:58:28,853 - INFO -  * Detected change in 'C:\\Python312\\Lib\\socketserver.py', reloading
+2025-03-31 16:58:28,855 - INFO -  * Detected change in 'C:\\Python312\\Lib\\threading.py', reloading
+2025-03-31 16:58:29,681 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-31 16:58:33,559 - INFO - Starting Flask application
+2025-03-31 16:58:33,569 - WARNING -  * Debugger is active!
+2025-03-31 16:58:33,583 - INFO -  * Debugger PIN: 129-054-596
+2025-03-31 16:58:33,610 - DEBUG - [SCRAPE-1743420513609946000] Starting scrape request
+2025-03-31 16:58:33,611 - DEBUG - [SCRAPE-1743420513609946000] Scraping content...
+2025-03-31 16:58:33,611 - DEBUG - [SCRAPE-1743420513609946000] Starting scrape with Crawl4aiTools
+2025-03-31 16:58:33,612 - DEBUG - Using proactor: IocpProactor
+2025-03-31 16:58:39,376 - DEBUG - [SCRAPE-1743420513609946000] Scrape completed successfully
+2025-03-31 16:58:39,377 - INFO - 127.0.0.1 - - [31/Mar/2025 16:58:39] "POST /scrape HTTP/1.1" 200 -
+2025-03-31 16:59:29,827 - DEBUG - [ANALYZE-1743420569826698100] Starting analysis request
+2025-03-31 16:59:29,829 - DEBUG - [ANALYZE-1743420569826698100] Getting structured Gemini response...
+2025-03-31 16:59:29,829 - DEBUG - [ANALYZE-1743420569826698100] Starting structured Gemini analysis
+2025-03-31 16:59:30,999 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-03-31 16:59:31,000 - DEBUG - load_verify_locations cafile='C:\\Python312\\Lib\\site-packages\\certifi\\cacert.pem'
+2025-03-31 16:59:31,233 - DEBUG - connect_tcp.started host='api.phidata.com' port=443 local_address=None timeout=60 socket_options=None
+2025-03-31 16:59:31,460 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002963E34CEC0>
+2025-03-31 16:59:31,460 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002963D8FC350> server_hostname='api.phidata.com' timeout=60
+2025-03-31 16:59:31,869 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000002963E34D250>
+2025-03-31 16:59:31,870 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-03-31 16:59:31,871 - DEBUG - send_request_headers.complete
+2025-03-31 16:59:31,871 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-03-31 16:59:31,872 - DEBUG - send_request_body.complete
+2025-03-31 16:59:31,872 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-03-31 16:59:32,081 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 31 Mar 2025 11:29:31 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'72'), (b'Connection', b'keep-alive'), (b'server', b'uvicorn')])
+2025-03-31 16:59:32,081 - INFO - HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"
+2025-03-31 16:59:32,082 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-03-31 16:59:32,082 - DEBUG - receive_response_body.complete
+2025-03-31 16:59:32,082 - DEBUG - response_closed.started
+2025-03-31 16:59:32,082 - DEBUG - response_closed.complete
+2025-03-31 16:59:32,083 - DEBUG - close.started
+2025-03-31 16:59:32,085 - DEBUG - close.complete
+2025-03-31 16:59:32,085 - INFO - 127.0.0.1 - - [31/Mar/2025 16:59:32] "POST /analyze HTTP/1.1" 200 -
+2025-03-31 17:00:15,656 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\werkzeug\\datastructures\\structures.py', reloading
+2025-03-31 17:00:16,871 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-31 17:00:20,763 - INFO - Starting Flask application
+2025-03-31 17:00:20,774 - WARNING -  * Debugger is active!
+2025-03-31 17:00:20,786 - INFO -  * Debugger PIN: 129-054-596
+2025-03-31 17:00:41,661 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\_pytest\\logging.py', reloading
+2025-03-31 17:00:41,678 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\_pytest\\monkeypatch.py', reloading
+2025-03-31 17:00:41,688 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\_pytest\\recwarn.py', reloading
+2025-03-31 17:00:41,703 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\_pytest\\tmpdir.py', reloading
+2025-03-31 17:00:42,396 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-31 17:00:46,250 - INFO - Starting Flask application
+2025-03-31 17:00:46,260 - WARNING -  * Debugger is active!
+2025-03-31 17:00:46,274 - INFO -  * Debugger PIN: 129-054-596
+2025-03-31 17:01:39,903 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-31 17:01:39,905 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-31 17:01:39,906 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-31 17:01:41,152 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-31 17:01:44,958 - INFO - Starting Flask application
+2025-03-31 17:01:44,969 - WARNING -  * Debugger is active!
+2025-03-31 17:01:44,982 - INFO -  * Debugger PIN: 129-054-596
+2025-03-31 17:01:51,702 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-31 17:01:51,702 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-31 17:01:51,702 - INFO -  * Detected change in 'C:\\Users\\Lenovo\\Desktop\\New folder\\LLM-Scraper\\app.py', reloading
+2025-03-31 17:01:52,500 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-31 17:02:52,248 - INFO - Starting Flask application
+2025-03-31 17:02:52,270 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.185:5000
+2025-03-31 17:02:52,270 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-31 17:02:52,281 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-31 17:02:56,027 - INFO - Starting Flask application
+2025-03-31 17:02:56,037 - WARNING -  * Debugger is active!
+2025-03-31 17:02:56,052 - INFO -  * Debugger PIN: 129-054-596
+2025-03-31 17:02:56,807 - INFO - 127.0.0.1 - - [31/Mar/2025 17:02:56] "GET / HTTP/1.1" 200 -
+2025-03-31 17:02:56,836 - INFO - 127.0.0.1 - - [31/Mar/2025 17:02:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-03-31 17:03:01,639 - DEBUG - [SCRAPE-1743420781639536500] Starting scrape request
+2025-03-31 17:03:01,640 - DEBUG - [SCRAPE-1743420781639536500] Scraping content...
+2025-03-31 17:03:01,640 - DEBUG - [SCRAPE-1743420781639536500] Starting scrape with Crawl4aiTools
+2025-03-31 17:03:01,641 - DEBUG - Using proactor: IocpProactor
+2025-03-31 17:03:07,840 - DEBUG - [SCRAPE-1743420781639536500] Scrape completed successfully
+2025-03-31 17:03:07,840 - INFO - 127.0.0.1 - - [31/Mar/2025 17:03:07] "POST /scrape HTTP/1.1" 200 -
+2025-03-31 17:03:42,484 - DEBUG - [ANALYZE-1743420822484242000] Starting analysis request
+2025-03-31 17:03:42,487 - DEBUG - [ANALYZE-1743420822484242000] Getting structured Gemini response...
+2025-03-31 17:03:44,357 - DEBUG - load_ssl_context verify=True cert=None trust_env=True http2=False
+2025-03-31 17:03:44,358 - DEBUG - load_verify_locations cafile='C:\\Python312\\Lib\\site-packages\\certifi\\cacert.pem'
+2025-03-31 17:03:44,601 - DEBUG - connect_tcp.started host='api.phidata.com' port=443 local_address=None timeout=60 socket_options=None
+2025-03-31 17:03:44,877 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000023BA8D038C0>
+2025-03-31 17:03:44,878 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000023BA87C4ED0> server_hostname='api.phidata.com' timeout=60
+2025-03-31 17:03:45,335 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x0000023BA816A150>
+2025-03-31 17:03:45,335 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-03-31 17:03:45,336 - DEBUG - send_request_headers.complete
+2025-03-31 17:03:45,336 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-03-31 17:03:45,337 - DEBUG - send_request_body.complete
+2025-03-31 17:03:45,337 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-03-31 17:03:45,567 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Mon, 31 Mar 2025 11:33:45 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'72'), (b'Connection', b'keep-alive'), (b'server', b'uvicorn')])
+2025-03-31 17:03:45,567 - INFO - HTTP Request: POST https://api.phidata.com/v1/telemetry/agent/run/create "HTTP/1.1 200 OK"
+2025-03-31 17:03:45,568 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-03-31 17:03:45,568 - DEBUG - receive_response_body.complete
+2025-03-31 17:03:45,568 - DEBUG - response_closed.started
+2025-03-31 17:03:45,568 - DEBUG - response_closed.complete
+2025-03-31 17:03:45,570 - DEBUG - close.started
+2025-03-31 17:03:45,570 - DEBUG - close.complete
+2025-03-31 17:03:45,571 - INFO - 127.0.0.1 - - [31/Mar/2025 17:03:45] "POST /analyze HTTP/1.1" 200 -
