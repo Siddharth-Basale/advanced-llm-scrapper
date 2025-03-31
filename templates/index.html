@@ -9,6 +9,8 @@
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Add marked.js for markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <!-- Header with Theme Toggle -->
@@ -134,6 +136,12 @@
         let lastScrapedUrl = '';
         let currentContent = '';
 
+        // Configure marked.js
+        marked.setOptions({
+            breaks: true,
+            gfm: true
+        });
+
         $(document).ready(function () {
             // Initialize UI components
             initTheme();
@@ -202,7 +210,7 @@
             
             // Clear previous results
             $('#content-display').text('');
-            $('#analysis-results').text('');
+            $('#analysis-results').html('');
             $('#analyze-section').addClass('d-none');
 
             $.ajax({
@@ -261,15 +269,23 @@
                     content: currentContent,
                     prompt: prompt
                 },
-                success: function(response) {
-                    if (response.status === 'error') {
-                        showAlert(response.error, 'danger');
-                        return;
-                    }
-                    
-                    $('#analysis-results').text(response.analysis);
-                    showAlert('Analysis completed successfully!', 'success');
-                },
+               // In your handleAnalyzeSubmit function's success handler:
+success: function(response) {
+    if (response.status === 'error') {
+        showAlert(response.error, 'danger');
+        return;
+    }
+    
+    // Additional cleaning for any remaining raw markdown
+    let cleanAnalysis = response.analysis
+        .replace(/\\n/g, '\n')  // Unescape newlines
+        .replace(/(?<!\*)\*(?!\*)/g, '');  // Remove single asterisks
+    
+    // Convert markdown to HTML
+    const htmlContent = marked.parse(cleanAnalysis);
+    $('#analysis-results').html(htmlContent);
+    showAlert('Analysis completed successfully!', 'success');
+},
                 error: function(xhr) {
                     const error = xhr.responseJSON?.error || 'Failed to analyze content';
                     showAlert(error, 'danger');
@@ -285,12 +301,14 @@
         // Copy text to clipboard
         function copyToClipboard(elementId) {
             const element = document.getElementById(elementId);
-            let text = element.textContent;
             
-            if (!text.trim()) {
+            if (!element.textContent.trim()) {
                 showAlert('Nothing to copy', 'warning');
                 return;
             }
+            
+            // For analysis results, we want to copy the raw text without HTML tags
+            let text = element.textContent;
             
             navigator.clipboard.writeText(text).then(() => {
                 showAlert('Copied to clipboard!', 'success');
@@ -302,7 +320,7 @@
         // Clear all content
         function clearAll() {
             $('#content-display').text('');
-            $('#analysis-results').text('');
+            $('#analysis-results').html('');
             $('#url').val('');
             $('#analysis-prompt').val('');
             currentContent = '';

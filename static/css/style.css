@@ -143,3 +143,201 @@ footer {
 .fade-in {
     animation: fadeIn 0.3s ease-out forwards;
 }
+
+/* Markdown Rendering Styles */
+#analysis-results h1, 
+#analysis-results h2, 
+#analysis-results h3, 
+#analysis-results h4, 
+#analysis-results h5, 
+#analysis-results h6 {
+    color: #58a6ff;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 0.3rem;
+}
+
+#analysis-results h1 {
+    font-size: 1.8rem;
+}
+
+#analysis-results h2 {
+    font-size: 1.5rem;
+}
+
+#analysis-results h3 {
+    font-size: 1.3rem;
+}
+
+#analysis-results p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+#analysis-results ul, 
+#analysis-results ol {
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#analysis-results li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+#analysis-results ul li::before {
+    content: "•";
+    color: #58a6ff;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+#analysis-results ol {
+    counter-reset: item;
+}
+
+#analysis-results ol li {
+    counter-increment: item;
+}
+
+#analysis-results ol li::before {
+    content: counter(item) ".";
+    color: #58a6ff;
+    display: inline-block;
+    width: 1.5em;
+    margin-left: -1.5em;
+}
+
+#analysis-results strong {
+    color: #f0f6fc;
+    font-weight: 600;
+}
+
+#analysis-results em {
+    font-style: italic;
+    color: #8b949e;
+}
+
+#analysis-results code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #30363d;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #f0f6fc;
+}
+
+#analysis-results pre {
+    background-color: #161b22;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+    border: 1px solid #30363d;
+}
+
+#analysis-results pre code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+    font-size: 0.95em;
+}
+
+#analysis-results blockquote {
+    border-left: 3px solid #58a6ff;
+    padding-left: 1rem;
+    margin-left: 0;
+    color: #8b949e;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    background-color: rgba(88, 166, 255, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 0 4px 4px 0;
+}
+
+#analysis-results a {
+    color: #58a6ff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#analysis-results a:hover {
+    text-decoration: underline;
+    color: #79c0ff;
+}
+
+#analysis-results hr {
+    border: none;
+    border-top: 1px solid #30363d;
+    margin: 1.5rem 0;
+}
+
+#analysis-results table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border: 1px solid #30363d;
+}
+
+#analysis-results th, 
+#analysis-results td {
+    border: 1px solid #30363d;
+    padding: 0.5rem 1rem;
+    text-align: left;
+}
+
+#analysis-results th {
+    background-color: #161b22;
+    font-weight: 600;
+    color: #58a6ff;
+}
+
+#analysis-results tr:nth-child(even) {
+    background-color: rgba(240, 246, 252, 0.05);
+}
+
+#analysis-results img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1rem 0;
+    border: 1px solid #30363d;
+}
+
+
+/* Add these to your style.css */
+#analysis-results {
+    white-space: normal; /* Override pre-wrap if needed */
+}
+
+#analysis-results br {
+    display: block;
+    content: "";
+    margin-bottom: 0.75rem;
+}
+
+#analysis-results ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 1.5rem;
+}
+
+#analysis-results ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#analysis-results ul li:before {
+    content: "•";
+    color: #58a6ff;
+    position: absolute;
+    left: 0;
+}
+
+/* For any remaining single asterisks that slip through */
+#analysis-results .asterisk {
+    display: none; /* Hide them if they appear */
+}

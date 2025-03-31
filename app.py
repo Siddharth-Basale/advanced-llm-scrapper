@@ -52,9 +52,15 @@ def get_structured_gemini_response(content, prompt):
     response = agent.run(full_prompt)  # Get raw response
     response_str = str(response)  # Ensure response is a string
 
-    # Remove everything after 'content_type=' dynamically
+    # Clean the response
     cleaned_content = response_str.split("content_type=")[0].strip()
-
+    
+    # Replace single asterisks used for emphasis with bold tags
+    cleaned_content = re.sub(r'(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)', r'**\1**', cleaned_content)
+    
+    # Replace newlines with markdown line breaks
+    cleaned_content = cleaned_content.replace('\n', '  \n')  # Markdown needs two spaces for line breaks
+    
     return cleaned_content
 
 @app.route("/")
